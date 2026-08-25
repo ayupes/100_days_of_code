@@ -7,7 +7,7 @@ Input 1:
 Output 1:
 1010
 
-Input 2:
+Input 2:f
 7
 Output 2:
 111
