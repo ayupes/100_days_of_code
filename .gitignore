@@ -1,0 +1,10 @@
+# macOS debug symbols
+
+# macOS
+.DS_Store
+
+# Debug symbols
+*.dSYM/
+
+# Object files
+*.o
