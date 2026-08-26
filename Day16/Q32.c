@@ -53,7 +53,7 @@ int main(void)
         else
     {
         printf("Not palindrome\n");
-    }   
+    }
 }
 
 
