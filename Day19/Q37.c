@@ -30,24 +30,48 @@ int main(void)
     }
     int lcm = 1;
     
-    for (int i = 1; i <= big_number; i++)
+    for (int i = 2; i <= big_number; i++)
     {
+        int count1 = 0;
+        int count2 = 0;
         char save_i = 'n';
         if (number1 % i == 0)
-        {
-            int quotient = number1 / i;
-            number1 = quotient;
+        {   
+            while(number1 % i == 0)
+            {
+                count1++;
+                int quotient = number1 / i;
+                number1 = quotient;
+            }
             save_i = 'y';
         }
         if (number2 % i == 0)
         {
-            int quotient = number2 / i;
-            number2 = quotient;
+            while(number2 % i == 0)
+            {   
+                count2++;
+                int quotient = number2 / i;
+                number2 = quotient;
+            }
             save_i = 'y';
+        }
+        int count;
+        if (count1 > count2)
+        {
+            count = count1;
+        }
+        else 
+        {
+            count = count2;
         }
         if (save_i == 'y')
         {
-            lcm = lcm * i;
+            int product = 1;
+            for (int j = 0; j < count; j++)
+            {
+                product = product * i;
+            }
+            lcm = lcm * product;
         }
     }
     printf("%i\n", lcm);
