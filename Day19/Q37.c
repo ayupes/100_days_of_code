@@ -56,16 +56,17 @@ int main(void)
             save_i = 'y';
         }
         int count;
-        if (count1 > count2)
-        {
-            count = count1;
-        }
-        else 
-        {
-            count = count2;
-        }
+        
         if (save_i == 'y')
         {
+            if (count1 > count2)
+            {
+                count = count1;
+            }
+            else 
+            {
+                count = count2;
+            }
             int product = 1;
             for (int j = 0; j < count; j++)
             {
