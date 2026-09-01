@@ -17,7 +17,22 @@ Approximate sum: 2.22
 int main(void)
 {
     printf("Enter n: ");
-    int n = 3;
+    int n;
+    scanf("%i", &n);
 
+    float sum = 2 / (float) 3;
+    int numerator = 2;
+    int denominator = 3;
+    for (int i = 2; i <= n; i++)
+    {
+        int difference = denominator - numerator;
+        difference += 2;
+        numerator += 2;
+        denominator = numerator + difference;
+
+        float term = numerator / (float) denominator;
+        sum += term;
+    }
+    printf("%.2f\n", sum);
 }
     
