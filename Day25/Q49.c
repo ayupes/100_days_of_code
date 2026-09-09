@@ -19,6 +19,18 @@ Output 1:
 */
 #include <stdio.h>
 int main(void)
-{
+{       const int n = 5;
+        for (int i = 0; i < n; i++)
+        {
+            int start = n;
+            start -= i;
+            // counting 
+            while (start <= n)
+            {
+                printf("%i", start);
+                start ++;
+            }
+            printf("\n");
+        }
     
 }
